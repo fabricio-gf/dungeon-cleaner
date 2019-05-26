@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
-{
-    public int selectedIndex;
+public class InventoryManager : MonoBehaviour{
+    public InventoryItem selectedItem;
 
     public GameObject[] objectPrefabs;
     public GameObject inventoryItem;
@@ -15,6 +14,7 @@ public class InventoryManager : MonoBehaviour
     public Transform myContentTransform = null;
 
     public bool removing = false;
+    public Image removingEnableImage;
 
     private void Start() {
         roundManager = FindObjectOfType<RoundManager>();
@@ -22,23 +22,27 @@ public class InventoryManager : MonoBehaviour
 
     public void ToggleRemove() {
         removing = !removing;
+        removingEnableImage.enabled = removing;
+        DeselectObject();
     }
     
-    public void SelectObject(int index)
-    {
-        selectedIndex = index;
+    public void SelectObject(InventoryItem item){
+        DeselectObject();
+        selectedItem = item;
     }
 
-    public void DeselectObject()
-    {
-        selectedIndex = -1;
+    public void DeselectObject(){
+        if (selectedItem != null) selectedItem.DeselectItem();
+        selectedItem = null;
     }
 
     public void PlaceObject(Transform t){
-        Debug.Log("Instanciando no "+t.name + " o " + objectPrefabs[selectedIndex].name);
+        Debug.Log("Instanciando no "+t.name + " o " + objectPrefabs[selectedItem.thisIndex].name);
         if (t.childCount == 0) {
-            Instantiate(objectPrefabs[selectedIndex],t);
-            roundManager.setCurrentMatriz(t.GetSiblingIndex(), selectedIndex);
+            t.GetComponent<GridObject>().myInventoryItem = selectedItem;
+            Instantiate(objectPrefabs[selectedItem.thisIndex], t);
+            roundManager.setCurrentMatriz(t.GetSiblingIndex(), selectedItem.thisIndex);
+            selectedItem.DisableItem();
             DeselectObject();
         } else {
             Debug.Log("Tentando inserir numa tile cheia");
@@ -51,6 +55,8 @@ public class InventoryManager : MonoBehaviour
             ToggleRemove();
         }
         roundManager.setCurrentMatriz(t.GetSiblingIndex(), -1);
+
+        //procurar o proximo botão que possui index igual ao removido
     }
 
     public void InitializeInventory(List<int> objects)

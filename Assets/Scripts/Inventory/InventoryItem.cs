@@ -7,6 +7,8 @@ public class InventoryItem : MonoBehaviour
 {
     public int thisIndex = 0;
     public InventoryManager inventoryManager = null;
+    [SerializeField] Image disableImage;
+    [SerializeField] Image selectImage;
     Image mRender;
 
     private void Start() {
@@ -17,7 +19,11 @@ public class InventoryItem : MonoBehaviour
 
     public void Interact()
     {
-        inventoryManager.SelectObject(thisIndex);
+        if (disableImage.enabled) {
+            return;
+        }
+        inventoryManager.SelectObject(this);
+        SelectItem();
     }
 
     public void UpdateSprite(int index)
@@ -26,5 +32,23 @@ public class InventoryItem : MonoBehaviour
         if (mRender == null) mRender = transform.GetChild(0).GetComponent<Image>();
         if (inventoryManager == null) inventoryManager = FindObjectOfType<InventoryManager>();
         mRender.sprite = inventoryManager.objectPrefabs[index].GetComponent<Image>().sprite;
+    }
+
+    public void SelectItem() {
+        selectImage.enabled = true; 
+    }
+
+    public void DeselectItem() {
+        selectImage.enabled = false;
+    }
+
+    public void DisableItem() {
+        disableImage.enabled = true;
+        selectImage.enabled = false;
+    }
+
+    public void EnableItem() {
+        disableImage.enabled = false;
+        selectImage.enabled = false;
     }
 }
