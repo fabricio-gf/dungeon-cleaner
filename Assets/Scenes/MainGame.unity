@@ -675,17 +675,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &88197822 stripped
@@ -971,17 +971,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &91752106 stripped
@@ -1418,17 +1418,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &165573980 stripped
@@ -1569,17 +1569,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &167048721 stripped
@@ -1720,17 +1720,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &178329560 stripped
@@ -1968,17 +1968,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &182869250 stripped
@@ -2259,17 +2259,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &237282368 stripped
@@ -3297,17 +3297,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &363337667 stripped
@@ -3891,6 +3891,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 6496519836833086513, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -3906,11 +3911,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &397449865 stripped
@@ -5055,17 +5055,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &719800283 stripped
@@ -6175,7 +6175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -283, y: -293.00003}
+  m_AnchoredPosition: {x: -283, y: -293}
   m_SizeDelta: {x: 180, y: -688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &940163851
@@ -7388,17 +7388,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &1182065105 stripped
@@ -8080,17 +8080,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &1289048392 stripped
@@ -8352,7 +8352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280.9, y: 167.9}
+  m_AnchoredPosition: {x: 280.9, y: 185}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374645554
@@ -8748,6 +8748,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1777967539002888682, guid: be07a9a543ced594aab0279c4383a43f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5676426886603372442, guid: be07a9a543ced594aab0279c4383a43f,
         type: 3}
       propertyPath: objectPrefabs.Array.size
@@ -8921,17 +8926,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &1394988296 stripped
@@ -9820,7 +9825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 283, y: 70}
+  m_AnchoredPosition: {x: 283, y: 87.1}
   m_SizeDelta: {x: 896, y: 768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618569591
@@ -9967,8 +9972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 782, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 971, y: 0}
+  m_SizeDelta: {x: 610, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620838152
 MonoBehaviour:
@@ -9990,7 +9995,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7a56c6670d323794cbfaa9a9d25df3af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10652,17 +10657,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &1744563182 stripped
@@ -10956,17 +10961,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &1778763158 stripped
@@ -11107,6 +11112,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 6496519836833086513, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -11122,11 +11132,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &1813373215 stripped
@@ -12330,17 +12335,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.999936
       objectReference: {fileID: 0}
+    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1394423827}
     - target: {fileID: 1186664292142011635, guid: 45a7b07d135308446a9306ab7dce0399,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300024, guid: 0d4cb15021cfa004ab974b6407c0978e,
         type: 3}
-    - target: {fileID: 5691912553617696685, guid: 45a7b07d135308446a9306ab7dce0399,
-        type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 1394423827}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45a7b07d135308446a9306ab7dce0399, type: 3}
 --- !u!224 &2078239297 stripped
