@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoundManager : MonoBehaviour
 {
-    public int currentRound = 1;
+    public Progress progress = null;
     //public int numberOfRoundsUntilDificultyRaise = 3;
 
     public int topGrade = 10;
@@ -22,12 +23,18 @@ public class RoundManager : MonoBehaviour
     // REFERENCES
     public MapManager mapManager = null;
     public InventoryManager inventoryManager = null;
+    public GameObject inventory = null;
     public BlackScreen blackScreen = null;
     public Countdown countdown = null;
 
+    public GameObject EndingWindow = null;
+    public Text RecordText1 = null;
+    public Text RecordText2 = null;
+    public GameObject RestartButton = null;
+
     private void Start()
     {
-        InitializeRound(currentRound);
+        InitializeRound(progress.currentProgress);
         blackScreen.EndFade();
         StartCoroutine(ShowRoomDelay());
     }
@@ -57,9 +64,12 @@ public class RoundManager : MonoBehaviour
 
     public void setCurrentMatriz(int matrixIndex, int value)
     {
-        int row = Mathf.FloorToInt(matrixIndex / numberOfRows);
+        print("index " + matrixIndex + " columns " + numberOfColumns);
+        int row = Mathf.FloorToInt(matrixIndex / numberOfColumns);
         int col = matrixIndex % numberOfColumns;
 
+        print("row " + row + " col " + col);
+        print("current matriz " + currentMatrix.GetLength(0) + " " + currentMatrix.GetLength(1));
         currentMatrix[row, col] = value;
     }
 
@@ -68,20 +78,26 @@ public class RoundManager : MonoBehaviour
         int grade = CheckGrade();
         if(grade == 10)
         {
-            // S GRADE
+            RecordText1.text = "S";
+            RecordText2.text = "PERFECT SCORE! GOOD JOB!";
         }
         else if(grade >= 8 || grade<= 9)
         {
-            // A GRADE
+            RecordText1.text = "A";
+            RecordText2.text = "You made it before the next adventuring group. Nice!";
         }
         else if(grade >= 5 || grade< 8)
         {
-            // B GRADE
+            RecordText1.text = "B";
+            RecordText2.text = "You fixed barely enough things so no one notices. That was close...";
         }
         else if(grade >= 0 || grade < 5)
         {
-            // F GRADE
+            RecordText1.text = "F";
+            RecordText2.text = "Oh no! The next group came and everything was a mess. The dungeon boss fired you for your incompetence.";
+            RestartButton.SetActive(true);
         }
+        EndingWindow.SetActive(true);
     }
 
     private IEnumerator ShowRoomDelay()
@@ -95,8 +111,9 @@ public class RoundManager : MonoBehaviour
     public void CleanRoom()
     {
         blackScreen.duringFade -= CleanRoom;
-        mapManager.RemoveObjects();
-        inventoryManager.InitializeInventory();
+        List<int> objects = mapManager.RemoveObjects();
+        inventory.SetActive(true);
+        inventoryManager.InitializeInventory(objects);
     }
 
     public void StartCountdown()
@@ -108,10 +125,26 @@ public class RoundManager : MonoBehaviour
     private int CheckGrade()
     {
         int finalGrade = topGrade;
-        //check distance
-        //if not 0, reduce grade
-        //if final grade less than X, lose
-        //else, win
+        for(int i = 0; i < gridMatrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < gridMatrix.GetLength(1); j++)
+            {
+                if(gridMatrix[i,j] != -1)
+                {
+                    if(currentMatrix[i,j] != gridMatrix[i, j])
+                    {
+                        finalGrade--;
+                    }
+                }
+                else
+                {
+                    if(currentMatrix[i,j] != -1)
+                    {
+                        finalGrade--;
+                    }
+                }
+            }
+        }
         return finalGrade;
     }
 }

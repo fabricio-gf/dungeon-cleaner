@@ -40,6 +40,7 @@ public class Timer : MonoBehaviour
             {
                 timerText.text = "0";
                 roundManager.EndRound();
+                ToggleTimer();
             }
         }
     }
