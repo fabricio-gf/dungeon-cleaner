@@ -8,20 +8,19 @@ public class InventoryManager : MonoBehaviour
     public int selectedIndex;
 
     public GameObject[] objectPrefabs;
-    public GameObject[] inventoryObjectPrefabs;
+    public GameObject inventoryItem;
 
     RoundManager roundManager;
 
-    public Transform contentTransform = null;
+    public Transform myContentTransform = null;
 
     public bool removing = false;
 
-    public Transform myInventoryContent;
     private void Start() {
         roundManager = FindObjectOfType<RoundManager>();
-        for (int i = 0; i < myInventoryContent.childCount; i++) {
-            Debug.Log(myInventoryContent.GetChild(i).name);
-            myInventoryContent.GetChild(i).GetChild(0).GetComponent<Image>().sprite = objectPrefabs[i].GetComponent<Image>().sprite;
+        for (int i = 0; i < myContentTransform.childCount; i++) {
+            Debug.Log(myContentTransform.GetChild(i).name);
+            myContentTransform.GetChild(i).GetChild(0).GetComponent<Image>().sprite = objectPrefabs[i].GetComponent<Image>().sprite;
         }
     }
 
@@ -62,8 +61,7 @@ public class InventoryManager : MonoBehaviour
     {
         int count = objects.Count;
         int randomIndex;
-
-        print("INITIAL ORDER " + objects[0] + objects[1] + objects[2]);
+        GameObject obj;
 
         for (int i = 0; i < count; i++)
         {
@@ -71,7 +69,8 @@ public class InventoryManager : MonoBehaviour
             {
                 randomIndex = Random.Range(0, objects.Count);
             } while (objects[randomIndex] == -1);
-            Instantiate(inventoryObjectPrefabs[objects[randomIndex]], contentTransform);
+            obj = Instantiate(inventoryItem, myContentTransform);
+            obj.GetComponent<InventoryItem>().UpdateSprite(objects[randomIndex]);
             objects[randomIndex] = -1;
         }
     }
