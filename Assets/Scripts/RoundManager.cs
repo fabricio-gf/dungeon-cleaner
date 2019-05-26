@@ -22,6 +22,7 @@ public class RoundManager : MonoBehaviour
     // REFERENCES
     public MapManager mapManager = null;
     public InventoryManager inventoryManager = null;
+    public GameObject inventory = null;
     public BlackScreen blackScreen = null;
     public Countdown countdown = null;
 
@@ -57,9 +58,12 @@ public class RoundManager : MonoBehaviour
 
     public void setCurrentMatriz(int matrixIndex, int value)
     {
-        int row = Mathf.FloorToInt(matrixIndex / numberOfRows);
+        print("index " + matrixIndex + " columns " + numberOfColumns);
+        int row = Mathf.FloorToInt(matrixIndex / numberOfColumns);
         int col = matrixIndex % numberOfColumns;
 
+        print("row " + row + " col " + col);
+        print("current matriz " + currentMatrix.GetLength(0) + " " + currentMatrix.GetLength(1));
         currentMatrix[row, col] = value;
     }
 
@@ -95,8 +99,9 @@ public class RoundManager : MonoBehaviour
     public void CleanRoom()
     {
         blackScreen.duringFade -= CleanRoom;
-        mapManager.RemoveObjects();
-        inventoryManager.InitializeInventory();
+        List<int> objects = mapManager.RemoveObjects();
+        inventory.SetActive(true);
+        inventoryManager.InitializeInventory(objects);
     }
 
     public void StartCountdown()

@@ -10,6 +10,8 @@ public class MapManager : MonoBehaviour
 
     private List<GameObject> objReferences = new List<GameObject>();
 
+    private List<int> objectIndexes = new List<int>();
+
     int rows;
     int columns;
 
@@ -27,6 +29,7 @@ public class MapManager : MonoBehaviour
             }
         }
 
+        objectIndexes.Clear();
         int randomRow = 0;
         int randomColumn = 0;
         for (int i = 0; i < numberOfObjects; i++)
@@ -38,6 +41,7 @@ public class MapManager : MonoBehaviour
             } while (gridMatrix[randomRow, randomColumn] != -1);
 
             gridMatrix[randomRow, randomColumn] = RandomizeObject();
+            objectIndexes.Add(gridMatrix[randomRow, randomColumn]);
 
             InstantiateObject(gridMatrix[randomRow, randomColumn], randomRow, randomColumn);
         }
@@ -51,13 +55,15 @@ public class MapManager : MonoBehaviour
         objReferences.Add(obj);
     }
 
-    public void RemoveObjects()
+    public List<int> RemoveObjects()
     {
         for(int i = 0; i < objReferences.Count; i++)
         {
             Destroy(objReferences[i]);
         }
         objReferences.Clear();
+
+        return objectIndexes;
     }
 
     private int RandomizeObject()
