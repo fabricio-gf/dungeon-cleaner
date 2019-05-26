@@ -11,6 +11,7 @@ public class Countdown : MonoBehaviour
     private int totalCounts = 3;
     private int countsPassed = 0;
     public float countTime = 0.5f;
+    public Image blockingImage;
 
     private void Awake()
     {
@@ -25,20 +26,22 @@ public class Countdown : MonoBehaviour
     IEnumerator CountdownOneSecond()
     {
         countdownText.enabled = true;
-        countdownText.text = "Ready?";
+        blockingImage.enabled = true;
+        countdownText.text = "READY?";
         while(countsPassed < totalCounts){
             yield return new WaitForSeconds(countTime);
             countsPassed++;
             switch (countsPassed)
             {
                 case 1:
-                    countdownText.text = "Set";
+                    countdownText.text = "SET";
                     break;
                 case 2:
-                    countdownText.text = "Go!";
+                    countdownText.text = "CLEAN!";
                     break;
                 case 3:
                     countdownText.enabled = false;
+                    blockingImage.enabled = false;
                     timer.StartTimer();
                     //start game
                     break;

@@ -48,6 +48,7 @@ public class RoundManager : MonoBehaviour
         //initialize grid on GUI
         //CHANGE SIZE OF GRID
 
+        numberOfObjects = 2 + round;
         gridMatrix = new int[numberOfRows, numberOfColumns];
         currentMatrix = new int[numberOfRows, numberOfColumns];
         for (int i = 0; i < numberOfRows; i++)
