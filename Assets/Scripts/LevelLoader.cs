@@ -18,13 +18,9 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void BackToMenu()
-    {
-
-    }
-
     public void ChangeScene(string SceneName)
     {
+        progress.currentProgress = 1;
         SceneManager.LoadScene(SceneName);
     }
 }

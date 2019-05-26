@@ -9,9 +9,9 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void ToggleMute()
+    public void ToggleMute(bool mute)
     {
-        audioSource.mute = !audioSource.mute;
+        audioSource.mute = mute;
     }
 
 }
