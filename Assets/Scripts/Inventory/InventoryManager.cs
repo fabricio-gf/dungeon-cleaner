@@ -34,6 +34,7 @@ public class InventoryManager : MonoBehaviour
         if (t.childCount ==0) {
             Instantiate(objectPrefabs[selectedIndex],t);
             roundManager.setCurrentMatriz(t.GetSiblingIndex(), selectedIndex);
+            DeselectObject();
         } else {
             Debug.Log("Tentando inserir numa tile cheia");
         }
