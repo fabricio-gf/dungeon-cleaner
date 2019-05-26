@@ -14,7 +14,7 @@ public class GridObject : MonoBehaviour
     {
         if (inventoryManager.removing){
             inventoryManager.RemoveObject(transform);
-        } else if (inventoryManager.selectedIndex < 0) {
+        } else if (inventoryManager.selectedIndex >= 0) {
             inventoryManager.PlaceObject(transform);
         }
 

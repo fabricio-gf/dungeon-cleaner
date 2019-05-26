@@ -8,8 +8,8 @@ public class InventoryItem : MonoBehaviour
     public InventoryManager inventoryManager = null;
 
     private void Start() {
-        if (manager == null) {
-            manager = FindObjectOfType<InventoryManager>();
+        if (inventoryManager == null) {
+            inventoryManager = FindObjectOfType<InventoryManager>();
         }
     }
 
