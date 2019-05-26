@@ -28,6 +28,9 @@ public class InventoryManager : MonoBehaviour{
     
     public void SelectObject(InventoryItem item){
         DeselectObject();
+        if (removing) {
+            ToggleRemove();
+        }
         selectedItem = item;
     }
 
