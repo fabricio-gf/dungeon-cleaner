@@ -9,6 +9,7 @@ public class BlackScreen : MonoBehaviour
 
     public delegate void BlackScreenDelegate();
     public BlackScreenDelegate duringFade;
+    public BlackScreenDelegate afterFade;
 
     private void Awake()
     {
@@ -28,6 +29,8 @@ public class BlackScreen : MonoBehaviour
         duringFade?.Invoke();
         yield return new WaitForSeconds(fadeDelay);
         EndFade();
+        yield return new WaitForSeconds(animationDelay);
+        afterFade?.Invoke();
     }
 
     public void EndFade()

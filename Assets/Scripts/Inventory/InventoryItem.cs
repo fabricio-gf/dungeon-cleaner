@@ -5,10 +5,10 @@ using UnityEngine;
 public class InventoryItem : MonoBehaviour
 {
     public int thisIndex = 0;
-    public InventoryManager manager = null;
+    public InventoryManager inventoryManager = null;
 
     public void Interact()
     {
-        manager.SelectObject(thisIndex);
+        inventoryManager.SelectObject(thisIndex);
     }
 }

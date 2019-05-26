@@ -22,6 +22,7 @@ public class RoundManager : MonoBehaviour
     public MapManager mapManager = null;
     public InventoryManager inventoryManager = null;
     public BlackScreen blackScreen = null;
+    public Countdown countdown = null;
 
     private void Start()
     {
@@ -69,14 +70,22 @@ public class RoundManager : MonoBehaviour
     private IEnumerator ShowRoomDelay()
     {
         yield return new WaitForSeconds(firstDelay);
-        blackScreen.duringFade += CleanRoom; 
+        blackScreen.duringFade += CleanRoom;
+        blackScreen.afterFade += StartCountdown;
         blackScreen.StartFade();
     }
 
     public void CleanRoom()
     {
+        blackScreen.duringFade -= CleanRoom;
         mapManager.RemoveObjects();
         inventoryManager.InitializeInventory();
+    }
+
+    public void StartCountdown()
+    {
+        blackScreen.afterFade -= StartCountdown;
+        countdown.StartCountdown();
     }
 
     private int CheckGrade()
