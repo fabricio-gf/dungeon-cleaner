@@ -104,7 +104,7 @@ public class RoundManager : MonoBehaviour
             RecordText1.color = EndingColors[2];
             RecordText2.text = "You fixed barely enough things so no one notices. That was close...";
         }
-        else if(grade >= 0 && grade < 5)
+        else if(grade < 5)
         {
             RecordText1.text = "F";
             RecordText1.color = EndingColors[3];
