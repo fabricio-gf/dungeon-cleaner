@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class GridObject : MonoBehaviour
 {
-    InventoryManager inventoryManager;
-
-    private void Start() {
-        inventoryManager = FindObjectOfType<InventoryManager>();
-    }
+    public InventoryManager inventoryManager;
 
     public void Interact()
     {
