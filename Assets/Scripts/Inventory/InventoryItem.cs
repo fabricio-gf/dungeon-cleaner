@@ -7,6 +7,12 @@ public class InventoryItem : MonoBehaviour
     public int thisIndex = 0;
     public InventoryManager inventoryManager = null;
 
+    private void Start() {
+        if (manager == null) {
+            manager = FindObjectOfType<InventoryManager>();
+        }
+    }
+
     public void Interact()
     {
         inventoryManager.SelectObject(thisIndex);
