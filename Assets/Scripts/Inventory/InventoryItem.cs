@@ -17,4 +17,9 @@ public class InventoryItem : MonoBehaviour
     {
         inventoryManager.SelectObject(thisIndex);
     }
+
+    public void UpdateSprite(int index)
+    {
+        thisIndex = index;
+    }
 }
