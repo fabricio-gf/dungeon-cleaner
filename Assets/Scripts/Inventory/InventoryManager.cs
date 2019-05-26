@@ -18,10 +18,6 @@ public class InventoryManager : MonoBehaviour
 
     private void Start() {
         roundManager = FindObjectOfType<RoundManager>();
-        for (int i = 0; i < myContentTransform.childCount; i++) {
-            Debug.Log(myContentTransform.GetChild(i).name);
-            myContentTransform.GetChild(i).GetChild(0).GetComponent<Image>().sprite = objectPrefabs[i].GetComponent<Image>().sprite;
-        }
     }
 
     public void ToggleRemove() {

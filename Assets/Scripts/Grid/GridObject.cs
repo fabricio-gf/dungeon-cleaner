@@ -8,11 +8,13 @@ public class GridObject : MonoBehaviour
 
     public void Interact()
     {
+        if (inventoryManager == null) {
+            inventoryManager = FindObjectOfType<InventoryManager>();
+        }
         if (inventoryManager.removing){
             inventoryManager.RemoveObject(transform);
         } else if (inventoryManager.selectedIndex >= 0) {
             inventoryManager.PlaceObject(transform);
         }
-
     }
 }
