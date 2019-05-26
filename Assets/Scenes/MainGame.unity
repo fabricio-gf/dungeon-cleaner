@@ -1666,6 +1666,7 @@ MonoBehaviour:
   timerText: {fileID: 181871309}
   complementaryText: {fileID: 1079139880}
   roundManager: {fileID: 2137652362}
+  FinishButton: {fileID: 0}
 --- !u!114 &181871309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2313,8 +2314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.001245, y: -65.100006}
-  m_SizeDelta: {x: 639.95, y: 93.7}
+  m_AnchoredPosition: {x: 0, y: -65}
+  m_SizeDelta: {x: 600, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243912234
 MonoBehaviour:
@@ -6766,9 +6767,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: c578f2150792a8646b825d42fa8f6fbe,
+    m_HighlightedSprite: {fileID: 21300000, guid: 178b82f9486ec064da61924ef414a838,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 37a615075057f0a4db9160063c87852e, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 392c31f9abd4c5e45a9d54072cfed3fc, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -6813,7 +6814,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c578f2150792a8646b825d42fa8f6fbe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 178b82f9486ec064da61924ef414a838, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12099,7 +12100,7 @@ PrefabInstance:
     - target: {fileID: 436622336387468530, guid: cc79ebd5ed86d014fbb43df58cd6dbe3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 436622336387468531, guid: cc79ebd5ed86d014fbb43df58cd6dbe3,
         type: 3}
