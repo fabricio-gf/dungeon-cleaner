@@ -20,6 +20,8 @@ public class RoundManager : MonoBehaviour
 
     public float firstDelay = 5;
 
+    List<int> objects;
+
     // REFERENCES
     [Header("References")]
     public MapManager mapManager = null;
@@ -123,9 +125,8 @@ public class RoundManager : MonoBehaviour
     public void CleanRoom()
     {
         blackScreen.duringFade -= CleanRoom;
-        List<int> objects = mapManager.RemoveObjects();
-        inventory.SetActive(true);
-        inventoryManager.InitializeInventory(objects);
+        objects = mapManager.RemoveObjects();
+        
     }
 
     public void JanitorCutscene()
@@ -145,6 +146,8 @@ public class RoundManager : MonoBehaviour
 
     public void DeleteJanitor()
     {
+        inventory.SetActive(true);
+        inventoryManager.InitializeInventory(objects);
         blackScreen.duringFade -= DeleteJanitor;
         Janitor.SetActive(false);
     }
