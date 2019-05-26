@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlackScreen : MonoBehaviour
 {
+    public Image image = null;
     Animator animator = null;
     public float fadeDelay = 1;
     public float animationDelay = 0.5f;
@@ -13,12 +15,13 @@ public class BlackScreen : MonoBehaviour
 
     private void Awake()
     {
+        image = GetComponent<Image>();
         animator = GetComponent<Animator>();
     }
 
     public void StartFade()
     {
-        print("start fade");
+        image.enabled = true;
         animator.SetTrigger("Open");
         StartCoroutine(FadeDelay());
     }
@@ -35,7 +38,13 @@ public class BlackScreen : MonoBehaviour
 
     public void EndFade()
     {
-        print("end fade");
         animator.SetTrigger("Close");
+        StartCoroutine(EndFadeDelay());
+    }
+
+    IEnumerator EndFadeDelay()
+    {
+        yield return new WaitForSeconds(animationDelay);
+        image.enabled = false;
     }
 }
