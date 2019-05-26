@@ -21,16 +21,22 @@ public class RoundManager : MonoBehaviour
     public float firstDelay = 5;
 
     // REFERENCES
+    [Header("References")]
     public MapManager mapManager = null;
     public InventoryManager inventoryManager = null;
     public GameObject inventory = null;
     public BlackScreen blackScreen = null;
     public Countdown countdown = null;
 
-    public GameObject EndingWindow = null;
+    [Header("Ending Window")]
+    public GameObject EndingObject = null;
     public Text RecordText1 = null;
     public Text RecordText2 = null;
     public GameObject RestartButton = null;
+    public GameObject EndingWindow = null;
+
+    [Header("Colors")]
+    public Color[] EndingColors;
 
     private void Start()
     {
@@ -48,7 +54,9 @@ public class RoundManager : MonoBehaviour
         //initialize grid on GUI
         //CHANGE SIZE OF GRID
 
-        numberOfObjects = 2 + round;
+        if (numberOfRows * numberOfColumns >= 2 + round) numberOfObjects = 2 + round;
+        else numberOfObjects = numberOfColumns * numberOfRows;
+        
         gridMatrix = new int[numberOfRows, numberOfColumns];
         currentMatrix = new int[numberOfRows, numberOfColumns];
         for (int i = 0; i < numberOfRows; i++)
@@ -77,28 +85,33 @@ public class RoundManager : MonoBehaviour
     public void EndRound()
     {
         int grade = CheckGrade();
+        print("grade " + grade);
         if(grade == 10)
         {
             RecordText1.text = "S";
+            RecordText1.color = EndingColors[0];
             RecordText2.text = "PERFECT SCORE! GOOD JOB!";
         }
-        else if(grade >= 8 || grade<= 9)
+        else if(grade >= 8 && grade<= 9)
         {
             RecordText1.text = "A";
+            RecordText1.color = EndingColors[1];
             RecordText2.text = "You made it before the next adventuring group. Nice!";
         }
-        else if(grade >= 5 || grade< 8)
+        else if(grade >= 5 && grade< 8)
         {
             RecordText1.text = "B";
+            RecordText1.color = EndingColors[2];
             RecordText2.text = "You fixed barely enough things so no one notices. That was close...";
         }
-        else if(grade >= 0 || grade < 5)
+        else if(grade >= 0 && grade < 5)
         {
             RecordText1.text = "F";
+            RecordText1.color = EndingColors[3];
             RecordText2.text = "Oh no! The next group came and everything was a mess. The dungeon boss fired you for your incompetence.";
             RestartButton.SetActive(true);
         }
-        EndingWindow.SetActive(true);
+        EndingObject.SetActive(true);
     }
 
     private IEnumerator ShowRoomDelay()
@@ -132,14 +145,14 @@ public class RoundManager : MonoBehaviour
             {
                 if(gridMatrix[i,j] != -1)
                 {
-                    if(currentMatrix[i,j] != gridMatrix[i, j])
+                    if (currentMatrix[i,j] != gridMatrix[i, j])
                     {
                         finalGrade--;
                     }
                 }
                 else
                 {
-                    if(currentMatrix[i,j] != -1)
+                    if (currentMatrix[i,j] != -1)
                     {
                         finalGrade--;
                     }
@@ -147,5 +160,10 @@ public class RoundManager : MonoBehaviour
             }
         }
         return finalGrade;
+    }
+
+    public void ToggleHideEndingWindow()
+    {
+        EndingWindow.SetActive(!EndingWindow.activeSelf);
     }
 }
