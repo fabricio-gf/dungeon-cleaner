@@ -40,7 +40,7 @@ public class InventoryManager : MonoBehaviour{
     }
 
     public void PlaceObject(Transform t){
-        Debug.Log("Instanciando no "+t.name + " o " + objectPrefabs[selectedItem.thisIndex].name);
+        //Debug.Log("Instanciando no "+t.name + " o " + objectPrefabs[selectedItem.thisIndex].name);
         if (t.childCount == 0) {
             t.GetComponent<GridObject>().myInventoryItem = selectedItem;
             Instantiate(objectPrefabs[selectedItem.thisIndex], t);
@@ -48,7 +48,7 @@ public class InventoryManager : MonoBehaviour{
             selectedItem.DisableItem();
             DeselectObject();
         } else {
-            Debug.Log("Tentando inserir numa tile cheia");
+            //Debug.Log("Tentando inserir numa tile cheia");
         }
     }
 

@@ -27,6 +27,7 @@ public class RoundManager : MonoBehaviour
     public GameObject inventory = null;
     public BlackScreen blackScreen = null;
     public Countdown countdown = null;
+    public GameObject Janitor = null;
 
     [Header("Ending Window")]
     public GameObject EndingObject = null;
@@ -68,17 +69,14 @@ public class RoundManager : MonoBehaviour
         }
         gridMatrix = mapManager.PlaceObjects(numberOfObjects, numberOfRows, numberOfColumns);
 
-        ShowRoomDelay();
+        //ShowRoomDelay();
     }
 
     public void setCurrentMatriz(int matrixIndex, int value)
     {
-        print("index " + matrixIndex + " columns " + numberOfColumns);
         int row = Mathf.FloorToInt(matrixIndex / numberOfColumns);
         int col = matrixIndex % numberOfColumns;
 
-        print("row " + row + " col " + col);
-        print("current matriz " + currentMatrix.GetLength(0) + " " + currentMatrix.GetLength(1));
         currentMatrix[row, col] = value;
     }
 
@@ -118,7 +116,7 @@ public class RoundManager : MonoBehaviour
     {
         yield return new WaitForSeconds(firstDelay);
         blackScreen.duringFade += CleanRoom;
-        blackScreen.afterFade += StartCountdown;
+        blackScreen.afterFade += JanitorCutscene;
         blackScreen.StartFade();
     }
 
@@ -128,6 +126,27 @@ public class RoundManager : MonoBehaviour
         List<int> objects = mapManager.RemoveObjects();
         inventory.SetActive(true);
         inventoryManager.InitializeInventory(objects);
+    }
+
+    public void JanitorCutscene()
+    {
+        blackScreen.afterFade -= JanitorCutscene;
+        Janitor.SetActive(true);
+        StartCoroutine(JanitorCoroutine());
+    }
+
+    IEnumerator JanitorCoroutine()
+    {
+        yield return new WaitForSeconds(2.4f);
+        blackScreen.duringFade += DeleteJanitor;
+        blackScreen.afterFade += StartCountdown;
+        blackScreen.StartFade();
+    }
+
+    public void DeleteJanitor()
+    {
+        blackScreen.duringFade -= DeleteJanitor;
+        Janitor.SetActive(false);
     }
 
     public void StartCountdown()
