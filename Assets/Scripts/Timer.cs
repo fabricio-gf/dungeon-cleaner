@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour
     public float time = 0;
     public Text timerText = null;
 
+    public RoundManager roundManager = null;
+
     private void Update()
     {
         if (time > 0)
@@ -18,6 +20,7 @@ public class Timer : MonoBehaviour
         else
         {
             timerText.text = "0";
+            roundManager.EndRound();
         }
     }
 }

@@ -33,8 +33,8 @@ public class MapManager : MonoBehaviour
         {
             do
             {
-                randomRow = Random.Range(0, rows - 1);
-                randomColumn = Random.Range(0, columns - 1);
+                randomRow = Random.Range(0, rows);
+                randomColumn = Random.Range(0, columns);
             } while (gridMatrix[randomRow, randomColumn] != -1);
 
             gridMatrix[randomRow, randomColumn] = RandomizeObject();
@@ -62,6 +62,6 @@ public class MapManager : MonoBehaviour
 
     private int RandomizeObject()
     {
-        return Random.Range(0, objectPrefabs.Length-1);
+        return Random.Range(0, objectPrefabs.Length); ;
     }
 }
