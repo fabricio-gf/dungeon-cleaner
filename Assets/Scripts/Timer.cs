@@ -15,12 +15,15 @@ public class Timer : MonoBehaviour
 
     private bool timerActive = false;
 
+    public GameObject FinishButton = null;
+
     public void StartTimer()
     {
         timerText.enabled = true;
         complementaryText.enabled = true;
         time = 30;
         ToggleTimer(true);
+        ToggleFinishButton(true);
     }
 
     public void ToggleTimer(bool forceStart = false)
@@ -50,5 +53,11 @@ public class Timer : MonoBehaviour
     public void EndTimer()
     {
         time = 0;
+    }
+
+    public void ToggleFinishButton(bool forceToggle = false)
+    {
+        if (forceToggle) FinishButton.SetActive(true);
+        else FinishButton.SetActive(!FinishButton.activeSelf);
     }
 }
