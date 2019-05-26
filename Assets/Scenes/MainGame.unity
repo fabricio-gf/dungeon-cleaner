@@ -5876,6 +5876,8 @@ MonoBehaviour:
   - {fileID: 6305524543343462653, guid: edb1411da5641ec4693ebfdc5f708f98, type: 3}
   - {fileID: 6615609783379162154, guid: 82bcf38367e6d024ca80f285bf02b166, type: 3}
   - {fileID: 5746540076858905404, guid: a61a7f77014c61345b0b3223c45d9500, type: 3}
+  - {fileID: 6305524543343462653, guid: ef60c3fdbd2cd6f4f9949afda65487f3, type: 3}
+  - {fileID: 6305524543343462653, guid: c2d5ee083c8034e478217c75e29cf4ad, type: 3}
   gridSpaces:
   - {fileID: 887363450998854465}
   - {fileID: 1813373215}
@@ -8707,6 +8709,17 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5676426886603372442, guid: be07a9a543ced594aab0279c4383a43f,
+        type: 3}
+      propertyPath: objectPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676426886603372442, guid: be07a9a543ced594aab0279c4383a43f,
+        type: 3}
+      propertyPath: objectPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 6305524543343462653, guid: c2d5ee083c8034e478217c75e29cf4ad,
+        type: 3}
     - target: {fileID: 1777967539688322111, guid: be07a9a543ced594aab0279c4383a43f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
