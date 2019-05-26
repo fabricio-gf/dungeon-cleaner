@@ -56,11 +56,16 @@ public class InventoryManager : MonoBehaviour
         int count = objects.Count;
         int randomIndex;
 
+        print("INITIAL ORDER " + objects[0] + objects[1] + objects[2]);
+
         for (int i = 0; i < count; i++)
         {
-            randomIndex = Random.Range(0,objects.Count);
+            do
+            {
+                randomIndex = Random.Range(0, objects.Count);
+            } while (objects[randomIndex] == -1);
             Instantiate(inventoryObjectPrefabs[objects[randomIndex]], contentTransform);
-            objects.Remove(randomIndex);
+            objects[randomIndex] = -1;
         }
     }
 }
