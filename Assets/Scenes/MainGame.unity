@@ -1226,7 +1226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e58814426851f84a83d3dffc30ea2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 30
+  roundTime: 0
   timerText: {fileID: 181871309}
   roundManager: {fileID: 2137652362}
 --- !u!114 &181871309

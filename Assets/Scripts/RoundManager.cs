@@ -15,7 +15,7 @@ public class RoundManager : MonoBehaviour
     public int numberOfObjects = 3;
 
     public int[,] gridMatrix;
-        
+    public int[,] currentMatrix;
 
     public float firstDelay = 5;
 
@@ -42,9 +42,25 @@ public class RoundManager : MonoBehaviour
         //CHANGE SIZE OF GRID
 
         gridMatrix = new int[numberOfRows, numberOfColumns];
+        currentMatrix = new int[numberOfRows, numberOfColumns];
+        for (int i = 0; i < numberOfRows; i++)
+        {
+            for (int j = 0; j < numberOfColumns; j++)
+            {
+                currentMatrix[i, j] = -1;
+            }
+        }
         gridMatrix = mapManager.PlaceObjects(numberOfObjects, numberOfRows, numberOfColumns);
 
         ShowRoomDelay();
+    }
+
+    public void setCurrentMatriz(int matrixIndex, int value)
+    {
+        int row = Mathf.FloorToInt(matrixIndex / numberOfRows);
+        int col = matrixIndex % numberOfColumns;
+
+        currentMatrix[row, col] = value;
     }
 
     public void EndRound()
