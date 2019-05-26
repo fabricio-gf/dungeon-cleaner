@@ -23,4 +23,8 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public void InitializeInventory()
+    {
+        print("initalize inventory");
+    }
 }

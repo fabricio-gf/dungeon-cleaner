@@ -20,10 +20,14 @@ public class RoundManager : MonoBehaviour
 
     // REFERENCES
     public MapManager mapManager = null;
+    public InventoryManager inventoryManager = null;
+    public BlackScreen blackScreen = null;
 
     private void Start()
     {
         InitializeRound(currentRound);
+        blackScreen.EndFade();
+        StartCoroutine(ShowRoomDelay());
     }
 
     public void InitializeRound(int round)
@@ -65,7 +69,14 @@ public class RoundManager : MonoBehaviour
     private IEnumerator ShowRoomDelay()
     {
         yield return new WaitForSeconds(firstDelay);
-        
+        blackScreen.duringFade += CleanRoom; 
+        blackScreen.StartFade();
+    }
+
+    public void CleanRoom()
+    {
+        mapManager.RemoveObjects();
+        inventoryManager.InitializeInventory();
     }
 
     private int CheckGrade()
