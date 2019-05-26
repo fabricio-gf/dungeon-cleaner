@@ -240,7 +240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2709191397e1bd47973920c19ac11c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedIndex: 0
   objectPrefabs: []
+  removing: 0
+  myInventoryContent: {fileID: 1777967539002888682}
 --- !u!1 &1777967539968719495
 GameObject:
   m_ObjectHideFlags: 0

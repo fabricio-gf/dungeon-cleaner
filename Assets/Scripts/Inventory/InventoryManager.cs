@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -14,8 +15,14 @@ public class InventoryManager : MonoBehaviour
     public Transform contentTransform = null;
 
     public bool removing = false;
+
+    public Transform myInventoryContent;
     private void Start() {
         roundManager = FindObjectOfType<RoundManager>();
+        for (int i = 0; i < myInventoryContent.childCount; i++) {
+            Debug.Log(myInventoryContent.GetChild(i).name);
+            myInventoryContent.GetChild(i).GetChild(0).GetComponent<Image>().sprite = objectPrefabs[i].GetComponent<Image>().sprite;
+        }
     }
 
     public void ToggleRemove() {
