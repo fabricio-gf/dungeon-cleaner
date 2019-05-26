@@ -46,4 +46,9 @@ public class Timer : MonoBehaviour
             }
         }
     }
+
+    public void EndTimer()
+    {
+        time = 0;
+    }
 }

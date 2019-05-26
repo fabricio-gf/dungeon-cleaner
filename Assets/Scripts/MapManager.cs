@@ -8,6 +8,8 @@ public class MapManager : MonoBehaviour
 
     public Transform[] gridSpaces;
 
+    public Transform[] solutionGridSpaces;
+
     private List<GameObject> objReferences = new List<GameObject>();
 
     private List<int> objectIndexes = new List<int>();
@@ -53,6 +55,7 @@ public class MapManager : MonoBehaviour
     {
         GameObject obj = Instantiate(objectPrefabs[objIndex], gridSpaces[row * columns + column]);
         objReferences.Add(obj);
+        Instantiate(objectPrefabs[objIndex], solutionGridSpaces[row * columns + column]);
     }
 
     public List<int> RemoveObjects()
