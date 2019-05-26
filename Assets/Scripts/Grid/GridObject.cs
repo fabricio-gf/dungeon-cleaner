@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class GridObject : MonoBehaviour
 {
-    public RemoveManager manager;
+    InventoryManager inventoryManager;
+
+    private void Start() {
+        inventoryManager = FindObjectOfType<InventoryManager>();
+    }
 
     public void Interact()
     {
-        if (manager.removing)
-        {
-            RemoveObject();
+        if (inventoryManager.removing){
+            inventoryManager.RemoveObject(transform);
+        } else if (inventoryManager.selectedIndex < 0) {
+            inventoryManager.PlaceObject(transform);
         }
-    }
-
-    public void RemoveObject()
-    {
 
     }
 }
